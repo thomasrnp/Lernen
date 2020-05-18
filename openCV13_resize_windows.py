@@ -1,5 +1,4 @@
 import cv2
-
 # dispW = 920
 # dispH = 760
 

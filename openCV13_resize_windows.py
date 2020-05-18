@@ -1,11 +1,11 @@
 import cv2
 
-dispW = 920
-dispH = 760
+# dispW = 920
+# dispH = 760
 
 cam = cv2.VideoCapture(0)
-cam.set(cv2.CAP_PROP_FRAME_WIDTH, dispW)
-cam.set(cv2.CAP_PROP_FRAME_HEIGHT, dispH)
+# cam.set(cv2.CAP_PROP_FRAME_WIDTH, dispW)
+# cam.set(cv2.CAP_PROP_FRAME_HEIGHT, dispH)
 
 while True:
     ret, frame=cam.read()

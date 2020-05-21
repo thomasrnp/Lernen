@@ -15,6 +15,9 @@ cam = cv2.VideoCapture(0)
 
 while True:
     ret, frame=cam.read()
+
+    # Maskierung = Bild nur bei weisser Flaeche
+    frame=cv2.bitwise_and(frame, frame, mask=img2) 
     cv2.imshow('Kamera', frame)
     cv2.moveWindow('Kamera',0,0)
 

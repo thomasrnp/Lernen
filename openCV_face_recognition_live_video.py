@@ -2,7 +2,8 @@ import face_recognition
 import cv2
 import os
 import pickle
-print(cv2.__version__)
+print("cv2 version: ", cv2.__version__)
+print("face_recognition version: ", face_recognition.__version__)
 
 Encodings=[]
 Names=[]

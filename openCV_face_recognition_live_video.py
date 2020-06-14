@@ -12,10 +12,16 @@ with open('train.pkl', 'rb') as f:
     Names = pickle.load(f)
     Encodings = pickle.load(f)
 
-cam = cv2.VideoCapture(0)
+# cam = cv2.VideoCapture(0)
+cam = cv2.VideoCapture('/home/fred/Videos/Thomas.mp4')
+
+# Check if camera opened successfully
+if (cam.isOpened()== False): 
+    print("Error opening video stream or file!")
+
 font=cv2.FONT_HERSHEY_SIMPLEX
 
-while True:
+while (cam.isOpened()):
     ret, frame=cam.read()
     frameSmall = cv2.resize(frame, (0,0), fx=.33, fy=.33)
     frameRGB = cv2.cvtColor(frameSmall, cv2.COLOR_BGR2RGB)
